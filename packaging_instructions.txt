@@ -1,0 +1,38 @@
+
+Instructions to Package main.py to a macOS Application
+
+1. Set Up a Fresh Environment
+   - Navigate to your project directory:
+     cd path/to/your/project
+   - Create a virtual environment named 'myenv':
+     python3 -m venv myenv
+   - Activate the virtual environment:
+     source myenv/bin/activate
+
+2. Install Required Packages ( fresh install in new environment )
+   - Install Flet, PyInstaller, and any other required packages:
+     pip install flet pyinstaller pandas numpy matplotlib 
+
+3. Package Your Application with Flet
+   - Navigate to the directory where your main.py file is located:
+     cd path/to/project/directory
+   
+   - Package your app: ## simple version
+     flet pack main.py # to better customize the Application, skip this and follow next instruction
+
+4. Customize the Application (Optional)
+   - Customize the name, icon, and other details:
+      # simply just run this complete command (have already set the icon path and names, but you can change name or product-name if you want)
+
+     flet pack main.py --name MCSAgile --icon icon.png --product-name "Monte Carlo Simulation Agile Projects" --product-version "1.0.0" --file-description "Description"
+
+
+5. Locate the Packaged Application
+   - Your bundled Flet app should now be available in the dist folder:
+     open dist/MCSAgile.app
+
+6. Distribute the App
+   - You can zip the contents of the dist folder and distribute it to your users.
+
+Conclusion:
+These instructions guide you through creating a virtual environment, installing necessary packages, and using Flet to package a Python script into a macOS application. Make sure to customize the commands according to your specific file paths and requirements.
